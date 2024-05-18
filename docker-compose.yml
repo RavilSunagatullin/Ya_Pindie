@@ -1,0 +1,40 @@
+version: '3'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./backend:/usr/src/app
+    depends_on:
+      - db
+    container_name: backend_container
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/app
+    ports:
+      - '3001:3001'
+    container_name: frontend_container
+  db:
+    restart: always
+    image: mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+      - ./backend/mongo-init:/docker-entrypoint-initdb.d
+    container_name: mongodb_container
+  nginx:
+    image: nginx:latest
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - backend
+      - frontend
+    container_name: nginx_container
+
+volumes:
+  mongo-data:

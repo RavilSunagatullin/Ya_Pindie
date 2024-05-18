@@ -1,0 +1,25 @@
+const express = require('express')
+const config = require('./src/config/index')
+const mongoose = require('./src/database/index')
+const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
+const path = require('path')
+const cors = require('./src/middlewares/cors')
+const apiRouter = require('./src/routes/api')
+const pagesRouter = require('./src/routes/pages')
+const app = express()
+
+app.use((err, req, res, next) => {
+  console.error(err.stack)
+  res.status(500).send('Something broke!')
+})
+app.use(cors)
+app.use(cookieParser())
+app.use(bodyParser.json())
+app.use(express.static(path.join(__dirname, 'src', 'public')))
+app.use(pagesRouter)
+app.use(apiRouter)
+app.listen(config.app.port, () => {
+  console.log(`Server is running on port ${config.app.port}`)
+})
+module.exports = app

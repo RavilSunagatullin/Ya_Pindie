@@ -1,0 +1,18 @@
+.wrapper {
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.profile {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
