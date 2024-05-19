@@ -40,7 +40,7 @@ export async function reload(blockName) {
 })()
 
 async function loadGamesBlock() {
-  gamesState = await getData('/backend/api/games')
+  gamesState = await getData('http://backend.local/api/games')
   if (!document.querySelector('.games-list')) return
   document.querySelector('.games-list').innerHTML = ''
   renderGames(gamesState)
@@ -50,7 +50,7 @@ async function loadGamesBlock() {
 }
 
 async function loadUsersBlock() {
-  usersState = await getData('/backend/api/users')
+  usersState = await getData('http://backend.local/api/users')
   if (!document.querySelector('.users-list')) return
   document.querySelector('.users-list').innerHTML = ''
   renderUsersList(usersState)
@@ -60,7 +60,7 @@ async function loadUsersBlock() {
 }
 
 async function loadCategoriesBlock() {
-  categoriesState = await getData('/backend/api/categories')
+  categoriesState = await getData('http://backend.local/api/categories')
   if (!document.querySelector('.categories-list')) return
   document.querySelector('.categories-list').innerHTML = ''
   renderCategoriesList(categoriesState)

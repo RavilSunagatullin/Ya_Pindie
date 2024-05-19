@@ -6,7 +6,7 @@ form &&
     event.preventDefault()
     const formData = new FormData(form)
     try {
-      const response = await fetch('/backend/api/auth/login', {
+      const response = await fetch('http://backend.local/api/auth/login', {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -18,7 +18,7 @@ form &&
       }
       const result = await response.json()
       document.cookie = `jwt=${result.jwt}`
-      window.location.href = '/backend/admin/dashboard'
+      window.location.href = 'http://backend.local/admin/dashboard'
     } catch (error) {
       showTooltip(error.message)
       return error
@@ -29,5 +29,5 @@ const logoutButton = document.querySelector('.logout-button')
 logoutButton &&
   logoutButton.addEventListener('click', async () => {
     document.cookie = 'jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
-    window.location.href = '/backend'
+    window.location.href = 'http://backend.local/'
   })

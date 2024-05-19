@@ -1,3 +1,9 @@
+const allowedCors = [
+  'https://practicum.yandex.ru',
+  'https://students-projects.ru',
+  'http://frontend.local',
+  'http://backend.local',
+]
 function cors(req, res, next) {
   const { origin } = req.headers
   if (allowedCors.includes(origin)) {
@@ -10,11 +16,5 @@ function cors(req, res, next) {
   }
   next()
 }
-const allowedCors = [
-  'https://practicum.yandex.ru',
-  'https://students-projects.ru',
-  'http://localhost',
-  'http://localhost:3000',
-  'http://localhost:3001',
-]
+
 module.exports = cors

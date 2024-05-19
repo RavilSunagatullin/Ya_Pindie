@@ -40,7 +40,7 @@ const prepareFormData = (form) => {
 const postNewGame = async (form) => {
   const object = prepareFormData(form)
   try {
-    const response = await postData('/backend/api/games', object)
+    const response = await postData('http://backend.local//api/games', object)
     if (response instanceof Error) {
       throw new Error(response.message)
     }
@@ -54,7 +54,7 @@ const postNewGame = async (form) => {
 const postNewCategory = async (form) => {
   const object = prepareFormData(form)
   try {
-    const response = await postData('/backend/api/categories', object)
+    const response = await postData('http://backend.local//api/categories', object)
     if (response instanceof Error) {
       throw new Error(response.message)
     }
@@ -68,7 +68,7 @@ const postNewCategory = async (form) => {
 const postNewUser = async (form) => {
   const object = prepareFormData(form)
   try {
-    const response = await postData('/backend/api/users', object)
+    const response = await postData('http://backend.local//api/users', object)
     if (response instanceof Error) {
       throw new Error(response.message)
     }
@@ -149,7 +149,7 @@ const removeUserFormListeners = () => {
 }
 
 const deleteGame = async (id) => {
-  const response = await deleteData(`/backend/api/games/${id}`)
+  const response = await deleteData(`http://backend.local//api/games/${id}`)
   return response
 }
 
@@ -169,7 +169,7 @@ const addDeleteGameListeners = async () => {
 }
 
 const deleteCategory = async (id) => {
-  const response = await deleteData(`/backend/api/categories/${id}`)
+  const response = await deleteData(`http://backend.local//api/categories/${id}`)
   return response
 }
 
@@ -189,7 +189,7 @@ const addDeleteCategoryListeners = async () => {
 }
 
 const deleteUsers = async (id) => {
-  const response = await deleteData(`/backend/api/users/${id}`)
+  const response = await deleteData(`http://backend.local//api/users/${id}`)
   return response
 }
 
@@ -210,7 +210,7 @@ const addDeleteUsersListeners = async () => {
 
 const putGame = async (id) => {
   try {
-    const response = await putData(`/backend/api/games/${id}`, currentState)
+    const response = await putData(`http://backend.local//api/games/${id}`, currentState)
     if (response instanceof Error) {
       throw new Error(response.message)
     }
@@ -250,7 +250,7 @@ const addPutGameListeners = () => {
 
 const putCategory = async (id) => {
   try {
-    const response = await putData(`/backend/api/categories/${id}`, currentCategoryState)
+    const response = await putData(`http://backend.local//api/categories/${id}`, currentCategoryState)
     if (response instanceof Error) {
       throw new Error(response.message)
     }
@@ -290,7 +290,7 @@ const addPutCategoryListeners = async () => {
 
 const putUser = async (id) => {
   try {
-    const response = await putData(`/backend/api/users/${id}`, userCurrentState)
+    const response = await putData(`http://backend.local/api/users/${id}`, userCurrentState)
     if (response instanceof Error) {
       throw new Error(response.message)
     }
