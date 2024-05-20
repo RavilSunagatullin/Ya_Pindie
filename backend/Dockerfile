@@ -5,5 +5,5 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 3000
-CMD ["sh", "-c", "node /usr/src/app/mongo-init/index.js && npm run dev"]
+CMD ["sh", "-c", "node /usr/src/app/mongo-init/index.js && npm start"]
 
