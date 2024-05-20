@@ -3,6 +3,10 @@ const allowedCors = [
   'https://students-projects.ru',
   'http://frontend.local',
   'http://backend.local',
+  'http://yapindie.nomoredomainswork.ru',
+  'http://yapindiebackend.nomoredomainswork.ru',
+  'https://yapindie.nomoredomainswork.ru',
+  'https://yapindiebackend.nomoredomainswork.ru'
 ]
 function cors(req, res, next) {
   const { origin } = req.headers
