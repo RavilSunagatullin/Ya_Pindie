@@ -1,5 +1,7 @@
 # Pindie
 
+## Установитe файлы из ветки [install-ready](https://github.com/RavilSunagatullin/Ya_Pindie/tree/install-ready)
+
 ## Для запуска через Docker
 1. Установите [Docker](https://docs.docker.com/get-docker/)
    и [Docker Compose](https://docs.docker.com/compose/install/), если у вас их еще нет
