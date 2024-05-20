@@ -1,4 +1,5 @@
-export const BASE_URL = 'http://backend.local/api'
+export const BASE_URL = 'http://yapindiebackend.nomoredomainswork.ru/api'
+// export const BASE_URL = 'http://backend.local/api'
 // export const BASE_URL = 'http://localhost:3000/api'  //? для локального запуска без докера
 
 export const endpoints = {
