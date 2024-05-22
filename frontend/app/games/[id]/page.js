@@ -40,7 +40,7 @@ export default function GamePage(props) {
         return {
           ...game,
           users: [...game.users, authContext.user],
-          users_permissions_users: [...game.users_permissions_users, authContext.user],
+          users_permissions_users: [...game.users, authContext.user],
         }
       })
       setIsVoted(true)
