@@ -39,8 +39,7 @@ export default function GamePage(props) {
       setGame(() => {
         return {
           ...game,
-          users: [...game.users, authContext.user],
-          users_permissions_users: [...game.users, authContext.user],
+          users: [...game.users, authContext.user]
         }
       })
       setIsVoted(true)
