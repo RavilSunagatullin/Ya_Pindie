@@ -1,5 +1,8 @@
 # Pindie
 
+#### URL Frontend: https://yapindie.nomoredomainswork.ru
+#### URL Backend: https://yapindiebackend.nomoredomainswork.ru
+
 ## Для запуска через Docker
 1. Установите [Docker](https://docs.docker.com/get-docker/)
    и [Docker Compose](https://docs.docker.com/compose/install/), если у вас их еще нет
