@@ -1,6 +1,7 @@
 # Pindie
 
-## Установитe файлы из ветки [install-ready](https://github.com/RavilSunagatullin/Ya_Pindie/tree/install-ready)
+#### URL Frontend: https://yapindie.nomoredomainswork.ru
+#### URL Backend: https://yapindiebackend.nomoredomainswork.ru
 
 ## Для запуска через Docker
 1. Установите [Docker](https://docs.docker.com/get-docker/)
